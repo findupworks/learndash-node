@@ -1,14 +1,23 @@
 {
-  "name": "learndash-node",
+  "name": "@findupworks/learndash-node",
+  "description": "Learndash SDK Node",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "readmeFilename": "README.md" ,
+  "main": "lib/index.js",
+  "author": "<erick.haendel@findup.com.br>",
+  "contributors": [
+    "Erick Haendel <erick.haendel@findup.com.br> (https://github.com/erickhaendel)",
+    "Andre Antunes <andre.santos@findup.com.br> (https://github.com/andreantunesbarros)"
+  ],
+  "repository": {
+    "url": "git+https://github.com/findupworks/learndash-node.git",
+    "type": "git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "devDependencies": {
     "@types/node": "^18.7.18",
     "ts-node": "^10.9.1",

@@ -127,7 +127,7 @@ export const getById = async (id: number): Promise<CourseOutput> => {
         title: course.title,
         content: course.content.replace(/<\/?[^>]+(>|$)/g, ""),
         categories: listCategories,
-        image: `${process.env.DOMAIN_FILES}/wp-content/uploads/${image?.meta_value}`,
+        image: `${process.env.LEARNDASH_DOMAIN_FILES}/wp-content/uploads/${image?.meta_value}`,
         lessons: lessons,
     };
 }
@@ -180,7 +180,7 @@ export const getAll = async (
             title: course.title,
             content: course.content.replace(/<\/?[^>]+(>|$)/g, ""),
             categories: listCategories,
-            image: `${process.env.DOMAIN_FILES}/wp-content/uploads/${image?.meta_value}`,
+            image: `${process.env.LEARNDASH_DOMAIN_FILES}/wp-content/uploads/${image?.meta_value}`,
         });
     }
 
