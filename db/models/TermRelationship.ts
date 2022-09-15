@@ -10,7 +10,7 @@ interface TermRelationshipAttributes {
 
 export interface TermRelationshipInput extends Optional<TermRelationshipAttributes, 'object_id' | 'term_taxonomy_id'> {}
 
-export interface TermRelationshipOuput extends Required<TermRelationshipAttributes> {}
+export interface TermRelationshipOutput extends Required<TermRelationshipAttributes> {}
 
 class TermRelationship extends Model<TermRelationshipAttributes, TermRelationshipInput> implements TermRelationshipAttributes {
     public object_id!: number

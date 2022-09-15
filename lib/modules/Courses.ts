@@ -1,6 +1,4 @@
 import * as CourseService from "../../db/service/courses/course.service";
-import course from "../../db/models/Post";
-
 class Courses {
     getAll(){
         return CourseService.getAll();

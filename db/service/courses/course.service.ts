@@ -1,6 +1,6 @@
-import Course, {PostOuput} from "../../models/Post";
+import {PostOutput} from "../../models/Post";
 import TermTaxonomy from "../../models/TermTaxonomy";
-import PostMeta, {PostMetaOuput} from "../../models/PostMeta";
+import PostMeta from "../../models/PostMeta";
 import CourseOutput from "./dto/course.output";
 import Post from "../../models/Post";
 import CategoriesOutput from "./dto/categories.output";
@@ -9,7 +9,7 @@ import TopicOutput from "./dto/topic.output";
 import QuizOutput from "./dto/quiz.output";
 
 
-const getInfoCourse = (id: number, postType: string, metaKey: string): Promise<PostOuput[]> => {
+const getInfoCourse = (id: number, postType: string, metaKey: string): Promise<PostOutput[]> => {
     return Post.findAll({
         where: {
             type: postType,
@@ -136,7 +136,7 @@ export const getAll = async (
     // filters?: GetAllIngredientsFilters
 ): Promise<CourseOutput[]> => {
     // Get information Wordpress
-    const response : PostOuput[] = await Post.findAll({
+    const response : PostOutput[] = await Post.findAll({
         where: {
             // ...(filters?.isDeleted && {deletedAt: {[Op.not]: null}})
             status: "publish",

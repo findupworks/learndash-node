@@ -1,6 +1,5 @@
 import { DataTypes, Model, Optional } from 'sequelize'
 import sequelizeConnection from '../config'
-import Course from "./Post";
 import Terms from "./Terms";
 
 interface TermTaxonomyAttributes {
@@ -12,7 +11,7 @@ interface TermTaxonomyAttributes {
 
 export interface TermTaxonomyInput extends Optional<TermTaxonomyAttributes, 'term_taxonomy_id' | 'term_id'> {}
 
-export interface TermTaxonomyOuput extends Required<TermTaxonomyAttributes> {}
+export interface TermTaxonomyOutput extends Required<TermTaxonomyAttributes> {}
 
 class TermTaxonomy extends Model<TermTaxonomyAttributes, TermTaxonomyInput> implements TermTaxonomyAttributes {
     public term_taxonomy_id!: number

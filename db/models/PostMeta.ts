@@ -11,7 +11,7 @@ interface PostMetaAttributes {
 
 export interface PostMetaInput extends Optional<PostMetaAttributes, 'meta_id' | 'meta_key'> {}
 
-export interface PostMetaOuput extends Required<PostMetaAttributes> {}
+export interface PostMetaOutput extends Required<PostMetaAttributes> {}
 
 class PostMeta extends Model<PostMetaAttributes, PostMetaInput> implements PostMetaAttributes {
     public meta_id!: number

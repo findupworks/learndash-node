@@ -1,6 +1,5 @@
 import {DataTypes, Model, NonAttribute, Optional} from 'sequelize'
 import sequelizeConnection from '../config'
-import Terms from "./Terms";
 import TermTaxonomy from "./TermTaxonomy";
 import TermRelationship from "./TermRelationship";
 import PostMeta from "./PostMeta";
@@ -17,7 +16,7 @@ interface PostAttributes {
 
 export interface PostInput extends Optional<PostAttributes, 'id' | 'title'> {}
 
-export interface PostOuput extends Required<PostAttributes> {}
+export interface PostOutput extends Required<PostAttributes> {}
 
 class Post extends Model<PostAttributes, PostInput> implements PostAttributes {
     public id!: number

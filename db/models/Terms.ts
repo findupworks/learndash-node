@@ -8,7 +8,7 @@ interface TermsAttributes {
 
 export interface TermsInput extends Optional<TermsAttributes, 'id' | 'name'> {}
 
-export interface TermsOuput extends Required<TermsAttributes> {}
+export interface TermsOutput extends Required<TermsAttributes> {}
 
 class Terms extends Model<TermsAttributes, TermsInput> implements TermsAttributes {
     public id!: number
