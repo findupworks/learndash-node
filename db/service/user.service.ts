@@ -1,9 +1,9 @@
 import {Op} from 'sequelize'
 // import {isEmpty} from 'lodash'
 
-import {User} from '../models'
+import User from '../models/User'
 // import {GetAllIngredientsFilters} from './types'
-import {UserInput, UserOuput} from '../models/User'
+import {UserInput, UserOutput} from '../models/User'
 
 // export const create = async (payload: IngredientInput): Promise<IngredientOuput> => {
 //     const ingredient = await Ingredient.create(payload)
@@ -47,7 +47,7 @@ export const getById = async (id: number): Promise<User> => {
 
 export const getAll = async (
     // filters?: GetAllIngredientsFilters
-): Promise<UserOuput[]> => {
+): Promise<UserOutput[]> => {
     return User.findAll({
         // where: {
         //     ...(filters?.isDeleted && {deletedAt: {[Op.not]: null}})
