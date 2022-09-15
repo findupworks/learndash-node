@@ -1,7 +1,7 @@
 {
   "name": "@findupworks/learndash-node",
   "description": "Learndash SDK Node",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "readmeFilename": "README.md" ,
   "main": "lib/index.js",
   "author": "<erick.haendel@findup.com.br>",
